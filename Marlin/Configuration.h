@@ -1642,7 +1642,7 @@
  * View the current statistics with M78.
  */
 // enable:
-//#define PRINTCOUNTER
+#define PRINTCOUNTER
 
 /**
  * Password
