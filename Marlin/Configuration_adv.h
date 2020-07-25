@@ -1146,7 +1146,7 @@
 
   #define SD_MENU_CONFIRM_START             // Confirm the selected SD file before printing
 
-  //#define MENU_ADDAUTOSTART               // Add a menu option to run auto#.g files
+  #define MENU_ADDAUTOSTART               // Add a menu option to run auto#.g files
 
   #define EVENT_GCODE_SD_ABORT "M118 A1 action:cancel\nG28XY"      // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
 
