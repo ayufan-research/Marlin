@@ -489,9 +489,9 @@
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
-  #define DEFAULT_Kp 21.73
-  #define DEFAULT_Ki 1.54
-  #define DEFAULT_Kd 76.55
+  #define DEFAULT_Kp 30.46
+  #define DEFAULT_Ki 3.06
+  #define DEFAULT_Kd 75.68
 
 #endif // PIDTEMP
 
