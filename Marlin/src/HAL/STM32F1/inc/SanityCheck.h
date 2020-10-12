@@ -25,8 +25,8 @@
  * Test STM32F1-specific configuration values for errors at compile-time.
  */
 
-#if ENABLED(FAST_PWM_FAN) || SPINDLE_LASER_FREQUENCY
-  #error "Features requiring Hardware PWM (FAST_PWM_FAN, SPINDLE_LASER_FREQUENCY) are not yet supported on STM32F1."
+#if SPINDLE_LASER_FREQUENCY
+  #error "Features requiring Hardware PWM (SPINDLE_LASER_FREQUENCY) are not yet supported on STM32F1."
 #endif
 
 #if !defined(HAVE_SW_SERIAL) && HAS_TMC_SW_SERIAL
