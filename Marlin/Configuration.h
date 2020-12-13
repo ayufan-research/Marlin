@@ -501,9 +501,9 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    #define DEFAULT_Kp 30.46
-    #define DEFAULT_Ki 3.06
-    #define DEFAULT_Kd 75.68
+    #define DEFAULT_Kp 31.02
+    #define DEFAULT_Ki 3.17
+    #define DEFAULT_Kd 75.85
   #endif
 #endif // PIDTEMP
 
@@ -746,7 +746,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 440 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 800, 440 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -849,7 +849,7 @@
 //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
-//#define USE_PROBE_FOR_Z_HOMING
+#define USE_PROBE_FOR_Z_HOMING
 
 /**
  * Z_MIN_PROBE_PIN
@@ -991,7 +991,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -55, -23, -0.97 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, -23, -0.97 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1391,11 +1391,11 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing.
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
-  #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing
-  #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
+  #define Z_SAFE_HOMING_X_POINT 215  // X point for Z homing
+  #define Z_SAFE_HOMING_Y_POINT 180  // Y point for Z homing
 #endif
 
 // Homing speeds (mm/min)
