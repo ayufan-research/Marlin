@@ -51,7 +51,12 @@
   #endif
 
   void _lcd_babystep(const AxisEnum axis, PGM_P const msg) {
-    if (ui.use_click()) return ui.goto_previous_screen_no_defer();
+    if (ui.use_click()) {
+#if ENABLED(EEPROM_SETTINGS)
+      ui.store_settings();
+#endif
+      return ui.goto_previous_screen_no_defer();
+    }
     if (ui.encoderPosition) {
       const int16_t steps = int16_t(ui.encoderPosition) * (
         #if ENABLED(BABYSTEP_XY)

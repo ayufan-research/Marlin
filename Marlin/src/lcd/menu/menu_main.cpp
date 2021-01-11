@@ -106,6 +106,10 @@ void menu_main() {
   START_MENU();
   BACK_ITEM(MSG_INFO_SCREEN);
 
+  // ayufan: add additional options
+  SUBMENU(MSG_BABYSTEP_Z, TERN(BABYSTEP_ZPROBE_OFFSET, lcd_babystep_zoffset, lcd_babystep_z));
+  SUBMENU(MSG_MOVE_Z, [] { ui.manual_move.menu_scale = 1; lcd_move_z(); } );
+
   if (busy) {
     #if MACHINE_CAN_PAUSE
       ACTION_ITEM(MSG_PAUSE_PRINT, ui.pause_print);
